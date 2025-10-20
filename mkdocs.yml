@@ -1,0 +1,76 @@
+site_name: GIS Portfolio
+site_url: https://example.com
+repo_url: https://github.com/galag/gis-portfolio
+repo_name: galag/gis-portfolio
+
+theme:
+  name: material
+  language: sv
+  palette:
+    # Light mode
+    - scheme: default
+      primary: green
+      accent: light green
+      toggle:
+        icon: material/brightness-7
+        name: Byt till mörkt läge
+    # Dark mode
+    - scheme: slate
+      primary: green
+      accent: lime
+      toggle:
+        icon: material/brightness-4
+        name: Byt till ljust läge
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - content.code.copy
+    - content.code.annotate
+    - toc.integrate
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+
+nav:
+  - Hem: index.md
+  - Projekt:
+      - HaV – Havsdata 360: projects/hav-havsdata-360.md
+      - Naturvårdsverket – VåtmarkWatch: projects/nv-vatmarkwatch.md
+      - Akademiska Hus – CampusNVI: projects/akademiska-campusnvi.md
+      - Ulricehamn – KommunNVI-Suite: projects/ulricehamn-kommunnvi-suite.md
+      - Lst Gävleborg – ReservatsUnderlag Pro: projects/lst-gavleborg-reservatsunderlag-pro.md
+      - Båstad – DP-NVI Light: projects/bastad-dp-nvi-light.md
+      - Halmstad – StadsNVI: projects/halmstad-stadsnvi.md
+      - Lst Norrbotten – RestaureringsKontroll: projects/lst-norrbotten-restaureringskontroll.md
+  - Metodik:
+      - NVI-metodik: includes/nvi-metodik.md
+      - Våtmark-monitorering: includes/vatmark-metodik.md
+      - QA/QC & HMK: includes/qaqc-hmk.md
+  - Om mig: about.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/galag
+      name: GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/exempel
+      name: LinkedIn
+
+copyright: Copyright &copy; 2025 GIS Portfolio

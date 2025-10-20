@@ -1,0 +1,1 @@
+# GIS-portfölj\n\nVälkommen! Här hittar du åtta dummy-projekt som illustrerar Metria-vänliga GIS-uppdrag inom geodata, naturvärdesinventering (NVI), våtmarker och miljö. Varje sida beskriver uppdragets mål, metod i korthet, leverabler och länk till upphandling.\n\n> Detta är en portföljsida med exempelprojekt för demonstrativa syften.
