@@ -5,7 +5,7 @@ const projects = [
     type: "featured",
     summary: "Interaktiv webbkarta med filtrering av PFAS, kvicksilver och andra föroreningar i sjöar.",
     tags: ["MapLibre", "Vanilla JS", "GeoJSON", "Miljöövervakning"],
-    repoUrl: "https://github.com/galag/miljogifter-500",
+    repoUrl: "https://github.com/ulfboge/miljogifter-500",
     liveUrl: "",
     docsUrl: "",
     imageUrl: "https://raw.githubusercontent.com/ulfboge/miljogifter-500/main/screenshot.png",
@@ -17,7 +17,7 @@ const projects = [
     type: "featured",
     summary: "Leaflet-karta över publika GBIF-observationer med statistik, arter och geografisk översikt.",
     tags: ["Leaflet", "GBIF API", "Biodiversitet", "GitHub Pages"],
-    repoUrl: "https://github.com/galag/nrm-ringmarkningsdata",
+    repoUrl: "https://github.com/ulfboge/nrm-ringmarkningsdata",
     liveUrl: "https://ulfboge.github.io/nrm-ringmarkningsdata/",
     docsUrl: "",
     coordinates: [16.5, 62.8]
@@ -28,7 +28,7 @@ const projects = [
     type: "featured",
     summary: "Demo för NDVI-förändringsanalys i skog med Earth Engine, periodjämförelser och areaestimat.",
     tags: ["Google Earth Engine", "Sentinel-2", "NDVI", "Förändringsdetektion"],
-    repoUrl: "https://github.com/galag/skogsmonitor-gee-demo",
+    repoUrl: "https://github.com/ulfboge/skogsmonitor-gee-demo",
     liveUrl: "",
     docsUrl: "",
     coordinates: [15.8, 61.4]
@@ -39,7 +39,7 @@ const projects = [
     type: "featured",
     summary: "Arbetsflöde för kolmodellering med GEE, klimat- och jorddata samt export till notebook-baserad analys.",
     tags: ["GEE", "Jupyter", "Raster", "Kolprojekt"],
-    repoUrl: "https://github.com/galag/soil-carbon-modeling",
+    repoUrl: "https://github.com/ulfboge/soil-carbon-modeling",
     liveUrl: "",
     docsUrl: "",
     coordinates: [18.3, 59.3]
@@ -50,7 +50,7 @@ const projects = [
     type: "featured",
     summary: "Artutbredningsmodellering för lemurer i Madagaskar med satellitembeddings och klassiska prediktorer.",
     tags: ["R", "SDM", "AlphaEarth", "WorldClim"],
-    repoUrl: "https://github.com/galag/movement_ecology",
+    repoUrl: "https://github.com/ulfboge/movement_ecology",
     liveUrl: "",
     docsUrl: "",
     coordinates: [46.9, -19.5]
@@ -61,7 +61,7 @@ const projects = [
     type: "featured",
     summary: "Webbapp för nedladdning och paketering av geodata från svenska datakällor via karta.",
     tags: ["Node.js", "Leaflet", "STAC", "Geodataflöden"],
-    repoUrl: "https://github.com/galag/MGIS-downloader",
+    repoUrl: "https://github.com/ulfboge/MGIS-downloader",
     liveUrl: "",
     docsUrl: "",
     coordinates: [16.2, 60.9]
@@ -72,7 +72,7 @@ const projects = [
     type: "featured",
     summary: "Samling av biodiversitetskartor i QGIS med både statiska kartblad och webbpublicering.",
     tags: ["QGIS", "Kartdesign", "Biodiversitet", "GitHub Pages"],
-    repoUrl: "https://github.com/galag/maps-portfolio",
+    repoUrl: "https://github.com/ulfboge/maps-portfolio",
     liveUrl: "",
     docsUrl: "",
     coordinates: [39.8, -6.8]
@@ -83,7 +83,7 @@ const projects = [
     type: "featured",
     summary: "Praktiskt desktopprojekt för NVI med QGIS, kartproduktion och metodiskt QA/QC-upplägg.",
     tags: ["NVI", "QGIS", "Desktop GIS", "Planeringsunderlag"],
-    repoUrl: "https://github.com/galag/halmstad-stadsnvi-project",
+    repoUrl: "https://github.com/ulfboge/halmstad-stadsnvi-project",
     liveUrl: "",
     docsUrl: "",
     coordinates: [12.86, 56.67]
@@ -94,7 +94,7 @@ const projects = [
     type: "featured",
     summary: "Prototyp för öppen web-GIS-plattform med PostGIS, pg_tileserv, STAC, FastAPI och MapLibre.",
     tags: ["PostGIS", "FastAPI", "STAC", "MapLibre"],
-    repoUrl: "https://github.com/galag/enterprise",
+    repoUrl: "https://github.com/ulfboge/enterprise",
     liveUrl: "",
     docsUrl: "",
     coordinates: [15.0, 58.8]
@@ -105,7 +105,7 @@ const projects = [
     type: "featured",
     summary: "Integration mellan QGIS och MCP för promptstyrd lagerhantering, analys och PyQGIS-körning.",
     tags: ["QGIS", "MCP", "PyQGIS", "Automation"],
-    repoUrl: "https://github.com/galag/qgis_mcp",
+    repoUrl: "https://github.com/ulfboge/qgis_mcp",
     liveUrl: "",
     docsUrl: "",
     coordinates: null
@@ -116,7 +116,7 @@ const projects = [
     type: "featured",
     summary: "CNN-baserad artklassificering av galago-läten med mel-spektrogram och osäkerhetshantering.",
     tags: ["Python", "Deep Learning", "Akustik", "Biodiversitet"],
-    repoUrl: "https://github.com/galag/galago_audio_project",
+    repoUrl: "https://github.com/ulfboge/galago_audio_project",
     liveUrl: "",
     docsUrl: "",
     coordinates: null
@@ -127,7 +127,7 @@ const projects = [
     type: "lab",
     summary: "MRV-prototyp för GS4GG A/R med validering av fältdata, schemaregler och rapportstöd.",
     tags: ["MRV", "Gold Standard", "QGIS", "Datavalidering"],
-    repoUrl: "https://github.com/galag/gold-standard",
+    repoUrl: "https://github.com/ulfboge/gold-standard",
     liveUrl: "",
     docsUrl: "",
     coordinates: null
@@ -138,7 +138,7 @@ const projects = [
     type: "lab",
     summary: "Modulärt ramverk för EUDR, certifieringsförberedelser och monitorering med fokus på dokumentation.",
     tags: ["EUDR", "Dokumentation", "Arbetsflödesdesign", "ESG"],
-    repoUrl: "https://github.com/galag/forest-compliance-offers",
+    repoUrl: "https://github.com/ulfboge/forest-compliance-offers",
     liveUrl: "",
     docsUrl: "",
     coordinates: null
@@ -149,7 +149,7 @@ const projects = [
     type: "lab",
     summary: "PostgreSQL/PostGIS-baserad databas för observationer, analys och QGIS-integration.",
     tags: ["PostGIS", "QGIS", "SQL", "Biologidata"],
-    repoUrl: "https://github.com/galag/galagos",
+    repoUrl: "https://github.com/ulfboge/galagos",
     liveUrl: "",
     docsUrl: "",
     coordinates: null
@@ -160,7 +160,7 @@ const projects = [
     type: "lab",
     summary: "Skript för beräkning av Topographic Wetness Index med QGIS Processing och SAGA-flöden.",
     tags: ["QGIS", "TWI", "Hydrologi", "Python"],
-    repoUrl: "https://github.com/galag/Morast_QGIS",
+    repoUrl: "https://github.com/ulfboge/Morast_QGIS",
     liveUrl: "",
     docsUrl: "",
     coordinates: [13.4, 55.9]
@@ -171,7 +171,7 @@ const projects = [
     type: "lab",
     summary: "Lättviktsanalys för jämförelse mellan modell och referensdata för above-ground biomass.",
     tags: ["Biomassa", "Python", "Statistik"],
-    repoUrl: "https://github.com/galag/agb",
+    repoUrl: "https://github.com/ulfboge/agb",
     liveUrl: "",
     docsUrl: "",
     coordinates: null
@@ -182,7 +182,7 @@ const projects = [
     type: "lab",
     summary: "Projektstruktur för skogs- och ekosystemanalys med fokus på metodik och rapportproduktion.",
     tags: ["Ecosystem Services", "Skogsanalys", "Rapportering"],
-    repoUrl: "https://github.com/galag/wildlands-league-ecosystem",
+    repoUrl: "https://github.com/ulfboge/wildlands-league-ecosystem",
     liveUrl: "",
     docsUrl: "",
     coordinates: [-79.8, 45.5]
