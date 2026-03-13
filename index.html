@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GIS-portfölj - Johan Karlsson</title>
+  <meta
+    name="description"
+    content="GIS-portfölj med riktiga projekt inom kartor, fjärranalys och angränsande data- och AI-arbete."
+  />
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.0/dist/maplibre-gl.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="eyebrow">Johan Karlsson - GIS-portfölj</p>
+      <h1>GIS, kartanalys och tillämpad datautveckling</h1>
+      <p class="lead">
+        Uppdaterad med verkligt material från projekt i den här arbetsmappen.
+        Tidigare fiktiva case finns kvar under en separat arkivflik.
+      </p>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="controls" aria-label="Filtrering och navigation">
+      <div class="search-wrap">
+        <label for="search" class="sr-only">Sök projekt</label>
+        <input id="search" type="search" placeholder="Sök på namn, teknik eller ämne..." />
+      </div>
+
+      <nav class="tabs" aria-label="Innehållstyper">
+        <button class="tab is-active" data-tab="all" type="button">Allt</button>
+        <button class="tab" data-tab="real-gis" type="button">GIS och kartor</button>
+        <button class="tab" data-tab="real-other" type="button">Övriga data- och AI-projekt</button>
+        <button class="tab" data-tab="fictional" type="button">Tidigare koncept</button>
+      </nav>
+    </section>
+
+    <section class="content-grid">
+      <aside class="project-panel">
+        <h2>Projekt</h2>
+        <p id="result-count" class="result-count"></p>
+        <div id="project-list" class="project-list"></div>
+      </aside>
+
+      <section class="map-panel">
+        <div class="map-title-wrap">
+          <h2>Kartnavigering</h2>
+          <p>Klicka på en punkt i kartan eller på ett projektkort för att markera projektet.</p>
+        </div>
+        <div id="map" aria-label="Karta över geografiskt förankrade projekt"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Byggd i vanilla HTML, CSS och JavaScript - inga byggsteg behövs för publicering.</p>
+  </footer>
+
+  <script src="https://unpkg.com/maplibre-gl@4.7.0/dist/maplibre-gl.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,24 +1,24 @@
-# GIS Portfolio (MkDocs)
+# GIS-portfölj
 
-En enkel MkDocs-sajt med dummy-projekt för GIS/NVI/våtmarker.
+Portföljen är nu uppdaterad till en fristående webbsida i vanilla HTML/CSS/JS.
+Målet är att sidan ska kunna publiceras enkelt via GitHub Pages utan byggsteg.
 
-## Bygga lokalt
+## Snabbstart
 
-1. (Valfritt) Skapa och aktivera virtuell miljö
-2. Installera beroenden:
+1. Öppna `index.html` direkt i webbläsaren
+2. Eller publicera GitHub-repot till GitHub Pages (`root/index.html`)
 
-```bash
-pip install -r requirements.txt
-```
+Ingen npm-installation, ingen Python-miljö och ingen byggpipeline krävs.
 
-3. Starta dev-server:
+## Struktur
 
-```bash
-mkdocs serve
-```
+- `index.html` - huvudsida
+- `style.css` - layout och visuellt tema
+- `app.js` - projektdata, filtrering och kartnavigering
+- `docs/` + `site/` - tidigare MkDocs-material (bevarat som arkiv, inkl. konceptprojekt)
 
-4. Bygg statisk sajt:
+## Om kartan
 
-```bash
-mkdocs build
-```
+Sidan använder MapLibre via CDN och inbäddad projektdata i `app.js`.
+Det betyder att portfolioinnehållet visas utan att läsa lokal GeoJSON via `fetch()`,
+vilket gör den robust för enkel publicering.
