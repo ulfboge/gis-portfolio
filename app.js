@@ -285,6 +285,18 @@ const state = {
 const groupOrder = ["featured", "lab", "fictional"];
 const dialog = document.getElementById("project-dialog");
 const dialogContent = document.getElementById("dialog-content");
+const unavailableRepoIds = new Set([
+  "skogsmonitor-gee-demo",
+  "movement-ecology",
+  "mgis-downloader",
+  "halmstad-stadsnvi-project",
+  "enterprise-web-gis",
+  "qgis-mcp",
+  "galago-audio-project",
+  "galagos-db",
+  "morast-qgis",
+  "agb-comparison"
+]);
 
 function getFilteredProjects() {
   const needle = state.search.trim().toLowerCase();
@@ -306,10 +318,14 @@ function renderCard(project) {
         ? "Labb"
         : "Koncept";
 
+  const githubLink = project.repoUrl
+    ? unavailableRepoIds.has(project.id)
+      ? `<span class="link-btn is-disabled" title="Repo ej publikt på GitHub ännu">GitHub (ej tillgänglig)</span>`
+      : `<a class="link-btn" href="${project.repoUrl}" target="_blank" rel="noopener noreferrer">GitHub</a>`
+    : "";
+
   const links = [
-    project.repoUrl
-      ? `<a class="link-btn" href="${project.repoUrl}" target="_blank" rel="noopener noreferrer">GitHub</a>`
-      : "",
+    githubLink,
     project.liveUrl
       ? `<a class="link-btn" href="${project.liveUrl}" target="_blank" rel="noopener noreferrer">Sida</a>`
       : "",
@@ -347,10 +363,14 @@ function buildOsmEmbedUrl(project) {
 }
 
 function renderProjectDetail(project) {
+  const githubLink = project.repoUrl
+    ? unavailableRepoIds.has(project.id)
+      ? `<span class="link-btn is-disabled" title="Repo ej publikt på GitHub ännu">GitHub (ej tillgänglig)</span>`
+      : `<a class="link-btn" href="${project.repoUrl}" target="_blank" rel="noopener noreferrer">GitHub</a>`
+    : "";
+
   const links = [
-    project.repoUrl
-      ? `<a class="link-btn" href="${project.repoUrl}" target="_blank" rel="noopener noreferrer">GitHub</a>`
-      : "",
+    githubLink,
     project.liveUrl
       ? `<a class="link-btn" href="${project.liveUrl}" target="_blank" rel="noopener noreferrer">Sida</a>`
       : "",

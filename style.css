@@ -251,6 +251,13 @@ h1 {
   border-color: var(--accent);
 }
 
+.link-btn.is-disabled {
+  color: #8ea1af;
+  border-color: #364a59;
+  background: #0b1822;
+  cursor: not-allowed;
+}
+
 .site-footer {
   padding: 0.8rem 0 1.3rem;
   color: var(--muted);
