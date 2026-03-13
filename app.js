@@ -8,6 +8,7 @@ const projects = [
     repoUrl: "https://github.com/galag/miljogifter-500",
     liveUrl: "",
     docsUrl: "",
+    imageUrl: "https://raw.githubusercontent.com/ulfboge/miljogifter-500/main/screenshot.png",
     coordinates: [15.5, 62.2]
   },
   {
@@ -277,11 +278,13 @@ const projects = [
 ];
 
 const state = {
-  tab: "all",
+  tab: "featured",
   search: ""
 };
 
 const groupOrder = ["featured", "lab", "fictional"];
+const dialog = document.getElementById("project-dialog");
+const dialogContent = document.getElementById("dialog-content");
 
 function getFilteredProjects() {
   const needle = state.search.trim().toLowerCase();
@@ -324,8 +327,67 @@ function renderCard(project) {
       <p class="project-summary">${project.summary}</p>
       <div class="tag-row">${project.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}</div>
       <div class="links">${links}</div>
+      <div class="card-actions">
+        <button class="card-open" type="button" data-open-id="${project.id}">Läs mer</button>
+      </div>
     </article>
   `;
+}
+
+function buildOsmEmbedUrl(project) {
+  if (!Array.isArray(project.coordinates)) return "";
+  const [lon, lat] = project.coordinates;
+  const dLon = 0.45;
+  const dLat = 0.3;
+  const left = lon - dLon;
+  const right = lon + dLon;
+  const top = lat + dLat;
+  const bottom = lat - dLat;
+  return `https://www.openstreetmap.org/export/embed.html?bbox=${left}%2C${bottom}%2C${right}%2C${top}&layer=mapnik&marker=${lat}%2C${lon}`;
+}
+
+function renderProjectDetail(project) {
+  const links = [
+    project.repoUrl
+      ? `<a class="link-btn" href="${project.repoUrl}" target="_blank" rel="noopener noreferrer">GitHub</a>`
+      : "",
+    project.liveUrl
+      ? `<a class="link-btn" href="${project.liveUrl}" target="_blank" rel="noopener noreferrer">Sida</a>`
+      : "",
+    project.docsUrl
+      ? `<a class="link-btn" href="${project.docsUrl}" target="_blank" rel="noopener noreferrer">Dokument</a>`
+      : ""
+  ].join("");
+
+  let visual = `<p class="detail-empty">Ingen bild tillgänglig ännu.</p>`;
+  if (project.imageUrl) {
+    visual = `<img src="${project.imageUrl}" alt="Förhandsbild för ${project.title}" loading="lazy" />`;
+  } else if (Array.isArray(project.coordinates)) {
+    visual = `<iframe title="Kartöversikt för ${project.title}" src="${buildOsmEmbedUrl(project)}"></iframe>`;
+  }
+
+  dialogContent.innerHTML = `
+    <h3 class="detail-title">${project.title}</h3>
+    <p class="detail-summary">${project.summary}</p>
+    <div class="detail-grid">
+      <div>
+        <div class="tag-row">${project.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}</div>
+        <div class="links">${links}</div>
+      </div>
+      <div class="detail-visual">${visual}</div>
+    </div>
+  `;
+}
+
+function bindCardDetailEvents() {
+  document.querySelectorAll("[data-open-id]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const project = projects.find((item) => item.id === button.dataset.openId);
+      if (!project) return;
+      renderProjectDetail(project);
+      dialog.showModal();
+    });
+  });
 }
 
 function renderList() {
@@ -342,6 +404,7 @@ function renderList() {
 
   if (state.tab !== "all") {
     list.innerHTML = filtered.map(renderCard).join("");
+    bindCardDetailEvents();
     return;
   }
 
@@ -367,10 +430,26 @@ function renderList() {
       `
     )
     .join("");
+  bindCardDetailEvents();
 }
 
 function bindUi() {
   const searchInput = document.getElementById("search");
+  const closeButton = document.getElementById("dialog-close");
+
+  closeButton.addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (event) => {
+    const card = document.querySelector(".dialog-card");
+    if (!card) return;
+    const bounds = card.getBoundingClientRect();
+    const isInside =
+      event.clientX >= bounds.left &&
+      event.clientX <= bounds.right &&
+      event.clientY >= bounds.top &&
+      event.clientY <= bounds.bottom;
+    if (!isInside) dialog.close();
+  });
+
   searchInput.addEventListener("input", (event) => {
     state.search = event.target.value;
     renderList();

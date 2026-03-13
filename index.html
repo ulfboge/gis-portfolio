@@ -30,8 +30,8 @@
       </div>
 
       <nav class="tabs" aria-label="Innehållstyper">
-        <button class="tab is-active" data-tab="all" type="button">Alla</button>
-        <button class="tab" data-tab="featured" type="button">Utvalda projekt</button>
+        <button class="tab" data-tab="all" type="button">Alla</button>
+        <button class="tab is-active" data-tab="featured" type="button">Utvalda projekt</button>
         <button class="tab" data-tab="lab" type="button">Labb / under utveckling</button>
         <button class="tab" data-tab="fictional" type="button">Konceptarkiv</button>
       </nav>
@@ -47,6 +47,13 @@
   <footer class="site-footer">
     <p>Byggd i vanilla HTML, CSS och JavaScript - inga byggsteg behövs för publicering.</p>
   </footer>
+
+  <dialog id="project-dialog" class="project-dialog">
+    <article class="dialog-card">
+      <button id="dialog-close" class="dialog-close" type="button" aria-label="Stäng">×</button>
+      <div id="dialog-content"></div>
+    </article>
+  </dialog>
 
   <script src="./app.js"></script>
 </body>
