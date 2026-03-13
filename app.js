@@ -28,7 +28,7 @@ const projects = [
     type: "featured",
     summary: "Demo för NDVI-förändringsanalys i skog med Earth Engine, periodjämförelser och areaestimat.",
     tags: ["Google Earth Engine", "Sentinel-2", "NDVI", "Förändringsdetektion"],
-    repoUrl: "https://github.com/ulfboge/skogsmonitor-gee-demo",
+    repoUrl: "",
     liveUrl: "",
     docsUrl: "",
     coordinates: [15.8, 61.4]
@@ -50,7 +50,7 @@ const projects = [
     type: "featured",
     summary: "Artutbredningsmodellering för lemurer i Madagaskar med satellitembeddings och klassiska prediktorer.",
     tags: ["R", "SDM", "AlphaEarth", "WorldClim"],
-    repoUrl: "https://github.com/ulfboge/movement_ecology",
+    repoUrl: "",
     liveUrl: "",
     docsUrl: "",
     coordinates: [46.9, -19.5]
@@ -61,7 +61,7 @@ const projects = [
     type: "featured",
     summary: "Webbapp för nedladdning och paketering av geodata från svenska datakällor via karta.",
     tags: ["Node.js", "Leaflet", "STAC", "Geodataflöden"],
-    repoUrl: "https://github.com/ulfboge/MGIS-downloader",
+    repoUrl: "",
     liveUrl: "",
     docsUrl: "",
     coordinates: [16.2, 60.9]
@@ -83,7 +83,7 @@ const projects = [
     type: "featured",
     summary: "Praktiskt desktopprojekt för NVI med QGIS, kartproduktion och metodiskt QA/QC-upplägg.",
     tags: ["NVI", "QGIS", "Desktop GIS", "Planeringsunderlag"],
-    repoUrl: "https://github.com/ulfboge/halmstad-stadsnvi-project",
+    repoUrl: "",
     liveUrl: "",
     docsUrl: "",
     coordinates: [12.86, 56.67]
@@ -94,7 +94,7 @@ const projects = [
     type: "featured",
     summary: "Prototyp för öppen web-GIS-plattform med PostGIS, pg_tileserv, STAC, FastAPI och MapLibre.",
     tags: ["PostGIS", "FastAPI", "STAC", "MapLibre"],
-    repoUrl: "https://github.com/ulfboge/enterprise",
+    repoUrl: "",
     liveUrl: "",
     docsUrl: "",
     coordinates: [15.0, 58.8]
@@ -105,7 +105,7 @@ const projects = [
     type: "featured",
     summary: "Integration mellan QGIS och MCP för promptstyrd lagerhantering, analys och PyQGIS-körning.",
     tags: ["QGIS", "MCP", "PyQGIS", "Automation"],
-    repoUrl: "https://github.com/ulfboge/qgis_mcp",
+    repoUrl: "",
     liveUrl: "",
     docsUrl: "",
     coordinates: null
@@ -116,7 +116,7 @@ const projects = [
     type: "featured",
     summary: "CNN-baserad artklassificering av galago-läten med mel-spektrogram och osäkerhetshantering.",
     tags: ["Python", "Deep Learning", "Akustik", "Biodiversitet"],
-    repoUrl: "https://github.com/ulfboge/galago_audio_project",
+    repoUrl: "",
     liveUrl: "",
     docsUrl: "",
     coordinates: null
@@ -286,13 +286,6 @@ const groupOrder = ["featured", "lab", "fictional"];
 const dialog = document.getElementById("project-dialog");
 const dialogContent = document.getElementById("dialog-content");
 const unavailableRepoIds = new Set([
-  "skogsmonitor-gee-demo",
-  "movement-ecology",
-  "mgis-downloader",
-  "halmstad-stadsnvi-project",
-  "enterprise-web-gis",
-  "qgis-mcp",
-  "galago-audio-project",
   "galagos-db",
   "morast-qgis",
   "agb-comparison"
@@ -322,7 +315,9 @@ function renderCard(project) {
     ? unavailableRepoIds.has(project.id)
       ? `<span class="link-btn is-disabled" title="Repo ej publikt på GitHub ännu">GitHub (ej tillgänglig)</span>`
       : `<a class="link-btn" href="${project.repoUrl}" target="_blank" rel="noopener noreferrer">GitHub</a>`
-    : "";
+    : project.type === "featured"
+      ? `<span class="link-btn is-disabled" title="Repo publiceras snart">GitHub (publiceras snart)</span>`
+      : "";
 
   const links = [
     githubLink,
@@ -367,7 +362,9 @@ function renderProjectDetail(project) {
     ? unavailableRepoIds.has(project.id)
       ? `<span class="link-btn is-disabled" title="Repo ej publikt på GitHub ännu">GitHub (ej tillgänglig)</span>`
       : `<a class="link-btn" href="${project.repoUrl}" target="_blank" rel="noopener noreferrer">GitHub</a>`
-    : "";
+    : project.type === "featured"
+      ? `<span class="link-btn is-disabled" title="Repo publiceras snart">GitHub (publiceras snart)</span>`
+      : "";
 
   const links = [
     githubLink,
