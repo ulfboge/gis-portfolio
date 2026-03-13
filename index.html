@@ -8,7 +8,6 @@
     name="description"
     content="GIS-portfölj med riktiga projekt inom kartor, fjärranalys och angränsande data- och AI-arbete."
   />
-  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.0/dist/maplibre-gl.css" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
@@ -38,20 +37,10 @@
       </nav>
     </section>
 
-    <section class="content-grid">
-      <aside class="project-panel">
-        <h2>Projekt</h2>
-        <p id="result-count" class="result-count"></p>
-        <div id="project-list" class="project-list"></div>
-      </aside>
-
-      <section class="map-panel">
-        <div class="map-title-wrap">
-          <h2>Kartnavigering</h2>
-          <p>Klicka på en punkt i kartan eller på ett projektkort för att markera projektet.</p>
-        </div>
-        <div id="map" aria-label="Karta över geografiskt förankrade projekt"></div>
-      </section>
+    <section class="project-panel">
+      <h2>Projekt</h2>
+      <p id="result-count" class="result-count"></p>
+      <div id="project-list" class="project-list"></div>
     </section>
   </main>
 
@@ -59,7 +48,6 @@
     <p>Byggd i vanilla HTML, CSS och JavaScript - inga byggsteg behövs för publicering.</p>
   </footer>
 
-  <script src="https://unpkg.com/maplibre-gl@4.7.0/dist/maplibre-gl.js"></script>
   <script src="./app.js"></script>
 </body>
 </html>
