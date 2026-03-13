@@ -172,14 +172,14 @@ h1 {
   color: var(--muted);
 }
 
-.kind-pill.real-gis {
+.kind-pill.featured {
   border-color: #1f8b66;
   color: #66e3b4;
 }
 
-.kind-pill.real-other {
-  border-color: #4467d9;
-  color: #a9bcff;
+.kind-pill.lab {
+  border-color: #8b5cf6;
+  color: #ccb4ff;
 }
 
 .kind-pill.fictional {

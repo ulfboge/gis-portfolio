@@ -2,7 +2,7 @@ const projects = [
   {
     id: "miljogifter-500",
     title: "Miljögifter i svenska sjöar",
-    type: "real-gis",
+    type: "featured",
     summary: "Interaktiv webbkarta med filtrering av PFAS, kvicksilver och andra föroreningar i sjöar.",
     tags: ["MapLibre", "Vanilla JS", "GeoJSON", "Miljöövervakning"],
     repoUrl: "https://github.com/galag/miljogifter-500",
@@ -13,7 +13,7 @@ const projects = [
   {
     id: "nrm-ringmarkningsdata",
     title: "Ringmärkningsdata Sverige",
-    type: "real-gis",
+    type: "featured",
     summary: "Leaflet-karta över publika GBIF-observationer med statistik, arter och geografisk översikt.",
     tags: ["Leaflet", "GBIF API", "Biodiversitet", "GitHub Pages"],
     repoUrl: "https://github.com/galag/nrm-ringmarkningsdata",
@@ -24,7 +24,7 @@ const projects = [
   {
     id: "skogsmonitor-gee-demo",
     title: "Skogsmonitor GEE Demo",
-    type: "real-gis",
+    type: "featured",
     summary: "Demo för NDVI-förändringsanalys i skog med Earth Engine, periodjämförelser och areaestimat.",
     tags: ["Google Earth Engine", "Sentinel-2", "NDVI", "Förändringsdetektion"],
     repoUrl: "https://github.com/galag/skogsmonitor-gee-demo",
@@ -35,7 +35,7 @@ const projects = [
   {
     id: "soil-carbon-modeling",
     title: "Soil Carbon Modeling",
-    type: "real-gis",
+    type: "featured",
     summary: "Arbetsflöde för kolmodellering med GEE, klimat- och jorddata samt export till notebook-baserad analys.",
     tags: ["GEE", "Jupyter", "Raster", "Kolprojekt"],
     repoUrl: "https://github.com/galag/soil-carbon-modeling",
@@ -46,7 +46,7 @@ const projects = [
   {
     id: "movement-ecology",
     title: "Movement Ecology (SDM)",
-    type: "real-gis",
+    type: "featured",
     summary: "Artutbredningsmodellering för lemurer i Madagaskar med satellitembeddings och klassiska prediktorer.",
     tags: ["R", "SDM", "AlphaEarth", "WorldClim"],
     repoUrl: "https://github.com/galag/movement_ecology",
@@ -57,7 +57,7 @@ const projects = [
   {
     id: "mgis-downloader",
     title: "MGIS-Downloader",
-    type: "real-gis",
+    type: "featured",
     summary: "Webbapp för nedladdning och paketering av geodata från svenska datakällor via karta.",
     tags: ["Node.js", "Leaflet", "STAC", "Geodataflöden"],
     repoUrl: "https://github.com/galag/MGIS-downloader",
@@ -66,9 +66,75 @@ const projects = [
     coordinates: [16.2, 60.9]
   },
   {
+    id: "maps-portfolio",
+    title: "Maps Portfolio",
+    type: "featured",
+    summary: "Samling av biodiversitetskartor i QGIS med både statiska kartblad och webbpublicering.",
+    tags: ["QGIS", "Kartdesign", "Biodiversitet", "GitHub Pages"],
+    repoUrl: "https://github.com/galag/maps-portfolio",
+    liveUrl: "",
+    docsUrl: "",
+    coordinates: [39.8, -6.8]
+  },
+  {
+    id: "halmstad-stadsnvi-project",
+    title: "Halmstad StadsNVI (desktop)",
+    type: "featured",
+    summary: "Praktiskt desktopprojekt för NVI med QGIS, kartproduktion och metodiskt QA/QC-upplägg.",
+    tags: ["NVI", "QGIS", "Desktop GIS", "Planeringsunderlag"],
+    repoUrl: "https://github.com/galag/halmstad-stadsnvi-project",
+    liveUrl: "",
+    docsUrl: "",
+    coordinates: [12.86, 56.67]
+  },
+  {
+    id: "enterprise-web-gis",
+    title: "Enterprise Web GIS Starter",
+    type: "featured",
+    summary: "Prototyp för öppen web-GIS-plattform med PostGIS, pg_tileserv, STAC, FastAPI och MapLibre.",
+    tags: ["PostGIS", "FastAPI", "STAC", "MapLibre"],
+    repoUrl: "https://github.com/galag/enterprise",
+    liveUrl: "",
+    docsUrl: "",
+    coordinates: [15.0, 58.8]
+  },
+  {
+    id: "qgis-mcp",
+    title: "QGIS MCP",
+    type: "featured",
+    summary: "Integration mellan QGIS och MCP för promptstyrd lagerhantering, analys och PyQGIS-körning.",
+    tags: ["QGIS", "MCP", "PyQGIS", "Automation"],
+    repoUrl: "https://github.com/galag/qgis_mcp",
+    liveUrl: "",
+    docsUrl: "",
+    coordinates: null
+  },
+  {
+    id: "galago-audio-project",
+    title: "Galago Acoustic Classifier",
+    type: "featured",
+    summary: "CNN-baserad artklassificering av galago-läten med mel-spektrogram och osäkerhetshantering.",
+    tags: ["Python", "Deep Learning", "Akustik", "Biodiversitet"],
+    repoUrl: "https://github.com/galag/galago_audio_project",
+    liveUrl: "",
+    docsUrl: "",
+    coordinates: null
+  },
+  {
+    id: "gold-standard",
+    title: "Gold Standard MRV Pipeline",
+    type: "lab",
+    summary: "MRV-prototyp för GS4GG A/R med validering av fältdata, schemaregler och rapportstöd.",
+    tags: ["MRV", "Gold Standard", "QGIS", "Datavalidering"],
+    repoUrl: "https://github.com/galag/gold-standard",
+    liveUrl: "",
+    docsUrl: "",
+    coordinates: null
+  },
+  {
     id: "forest-compliance-offers",
     title: "Forest Compliance Offers",
-    type: "real-other",
+    type: "lab",
     summary: "Modulärt ramverk för EUDR, certifieringsförberedelser och monitorering med fokus på dokumentation.",
     tags: ["EUDR", "Dokumentation", "Arbetsflödesdesign", "ESG"],
     repoUrl: "https://github.com/galag/forest-compliance-offers",
@@ -79,7 +145,7 @@ const projects = [
   {
     id: "galagos-db",
     title: "Galagos Database",
-    type: "real-other",
+    type: "lab",
     summary: "PostgreSQL/PostGIS-baserad databas för observationer, analys och QGIS-integration.",
     tags: ["PostGIS", "QGIS", "SQL", "Biologidata"],
     repoUrl: "https://github.com/galag/galagos",
@@ -88,15 +154,37 @@ const projects = [
     coordinates: null
   },
   {
-    id: "galago-audio-project",
-    title: "Galago Acoustic Classifier",
-    type: "real-other",
-    summary: "CNN-baserad artklassificering av galago-läten med mel-spektrogram och osäkerhetshantering.",
-    tags: ["Python", "Deep Learning", "Akustik", "Biodiversitet"],
-    repoUrl: "https://github.com/galag/galago_audio_project",
+    id: "morast-qgis",
+    title: "Morast QGIS (TWI)",
+    type: "lab",
+    summary: "Skript för beräkning av Topographic Wetness Index med QGIS Processing och SAGA-flöden.",
+    tags: ["QGIS", "TWI", "Hydrologi", "Python"],
+    repoUrl: "https://github.com/galag/Morast_QGIS",
+    liveUrl: "",
+    docsUrl: "",
+    coordinates: [13.4, 55.9]
+  },
+  {
+    id: "agb-comparison",
+    title: "AGB jämförelse (mini-case)",
+    type: "lab",
+    summary: "Lättviktsanalys för jämförelse mellan modell och referensdata för above-ground biomass.",
+    tags: ["Biomassa", "Python", "Statistik"],
+    repoUrl: "https://github.com/galag/agb",
     liveUrl: "",
     docsUrl: "",
     coordinates: null
+  },
+  {
+    id: "wildlands-league-ecosystem",
+    title: "Wildlands League Ecosystem",
+    type: "lab",
+    summary: "Projektstruktur för skogs- och ekosystemanalys med fokus på metodik och rapportproduktion.",
+    tags: ["Ecosystem Services", "Skogsanalys", "Rapportering"],
+    repoUrl: "https://github.com/galag/wildlands-league-ecosystem",
+    liveUrl: "",
+    docsUrl: "",
+    coordinates: [-79.8, 45.5]
   },
   {
     id: "fiction-vatmarkwatch",
@@ -237,10 +325,10 @@ function initMap() {
         "circle-color": [
           "match",
           ["get", "type"],
-          "real-gis",
+          "featured",
           "#34d399",
-          "real-other",
-          "#7f9cff",
+          "lab",
+          "#8b5cf6",
           "fictional",
           "#f5cc63",
           "#cccccc"
@@ -345,10 +433,10 @@ function renderList() {
     .map((project) => {
       const selectedClass = project.id === state.selectedId ? "is-selected" : "";
       const kindLabel =
-        project.type === "real-gis"
-          ? "GIS"
-          : project.type === "real-other"
-            ? "Övrigt"
+        project.type === "featured"
+          ? "Utvalt"
+          : project.type === "lab"
+            ? "Labb"
             : "Koncept";
 
       const links = [
