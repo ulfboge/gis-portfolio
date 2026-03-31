@@ -1,9 +1,35 @@
 const projects = [
   {
+    id: "eo-driven-nvi",
+    title: "EO-driven naturvärdesinventering",
+    type: "featured",
+    summary:
+      "Reproducerbar hybridmetod för prioritering och riktad NVI med svenska öppna geodata (NMD, LiDAR-DTM, avverkningsanmälningar). Scriptad pipeline i Python/QGIS; positionerad som NVI förstudie med utökad fjärranalys enligt SS 199000:2023. Demo: Fiby urskog.",
+    tags: ["Nisch A", "NVI", "Python", "QGIS", "Öppen data", "Sverige"],
+    repoUrl: "https://github.com/ulfboge/nvi",
+    liveUrl: "https://ulfboge.github.io/nvi/",
+    docsUrl: "",
+    imageUrl: "https://ulfboge.github.io/nvi/assets/hotspot_showcase.png",
+    coordinates: [17.87, 59.88]
+  },
+  {
+    id: "vonat-tiko-mangroves",
+    title: "Tiko mangrove — hot och förändring (Kamerun)",
+    type: "lab",
+    summary:
+      "Tillämpad fjärranalys och ML för VoNat (Voice of Nature): mangrove, hotbild och förändring kring Tiko. Visar metod, leverans och samarbete med civilsamhälle — överförbart till svenska natur- och skogsuppdrag. Publik GitHub-länk läggs till när repot är öppet.",
+    tags: ["Fjärranalys", "GEE", "ML", "Mangrove", "Kamerun", "Biodiversitet"],
+    repoUrl: "",
+    liveUrl: "",
+    docsUrl: "",
+    imageUrl: "",
+    coordinates: [9.37, 4.08]
+  },
+  {
     id: "miljogifter-500",
     title: "Miljögifter i svenska sjöar",
     type: "featured",
-    summary: "Interaktiv webbkarta med filtrering av PFAS, kvicksilver och andra föroreningar i sjöar.",
+    summary: "Interaktiv webbkarta som visualiserar PFAS, kvicksilver och andra föroreningar i svenska sjöar. Filtrering och kartvyer gör det enklare att jämföra risknivåer mellan områden.",
     tags: ["MapLibre", "Vanilla JS", "GeoJSON", "Miljöövervakning"],
     repoUrl: "https://github.com/ulfboge/miljogifter-500",
     liveUrl: "",
@@ -15,110 +41,121 @@ const projects = [
     id: "nrm-ringmarkningsdata",
     title: "Ringmärkningsdata Sverige",
     type: "featured",
-    summary: "Leaflet-karta över publika GBIF-observationer med statistik, arter och geografisk översikt.",
+    summary: "Leaflet-karta över publika GBIF-observationer med statistik, artfilter och geografisk översikt. Projektet gör det lätt att utforska rumsliga mönster i biodiversitetsdata.",
     tags: ["Leaflet", "GBIF API", "Biodiversitet", "GitHub Pages"],
     repoUrl: "https://github.com/ulfboge/nrm-ringmarkningsdata",
     liveUrl: "https://ulfboge.github.io/nrm-ringmarkningsdata/",
     docsUrl: "",
+    imageUrl: "assets/screenshots/nrm-ringmarkningsdata.svg",
     coordinates: [16.5, 62.8]
   },
   {
     id: "skogsmonitor-gee-demo",
     title: "Skogsmonitor GEE Demo",
     type: "featured",
-    summary: "Demo för NDVI-förändringsanalys i skog med Earth Engine, periodjämförelser och areaestimat.",
-    tags: ["Google Earth Engine", "Sentinel-2", "NDVI", "Förändringsdetektion"],
-    repoUrl: "",
+    summary:
+      "Demo för NDVI-baserad förändringsanalys i svensk skog med Google Earth Engine: två perioder, ΔNDVI, förändringsmask och area i hektar. Pedagogiskt underlag för diskussion — ej operativt skogsinventarium. Publik GEE-app-länk läggs i repot när den finns.",
+    tags: ["Nisch B", "GEE", "Skog", "Sverige", "NDVI", "Change Detection"],
+    repoUrl: "https://github.com/ulfboge/skogsmonitor-gee-demo",
     liveUrl: "",
     docsUrl: "",
+    imageUrl: "assets/screenshots/skogsmonitor-gee-demo-screenshot.png",
     coordinates: [15.8, 61.4]
   },
   {
     id: "soil-carbon-modeling",
     title: "Soil Carbon Modeling",
     type: "featured",
-    summary: "Arbetsflöde för kolmodellering med GEE, klimat- och jorddata samt export till notebook-baserad analys.",
+    summary: "Arbetsflöde för kolmodellering med GEE, klimat- och jorddata samt export till notebook-baserad analys. Upplägget stödjer reproducerbara beräkningar och jämförelser mellan scenarier i kolprojekt.",
     tags: ["GEE", "Jupyter", "Raster", "Kolprojekt"],
     repoUrl: "https://github.com/ulfboge/soil-carbon-modeling",
     liveUrl: "",
     docsUrl: "",
+    imageUrl: "assets/screenshots/soil-carbon-modeling.svg",
     coordinates: [18.3, 59.3]
   },
   {
     id: "movement-ecology",
     title: "Movement Ecology (SDM)",
     type: "featured",
-    summary: "Artutbredningsmodellering för lemurer i Madagaskar med satellitembeddings och klassiska prediktorer.",
-    tags: ["R", "SDM", "AlphaEarth", "WorldClim"],
-    repoUrl: "",
+    summary: "Artutbredningsmodellering för lemurer i Madagaskar med satellitembeddings och klassiska prediktorer. Analysen jämför datakällor och identifierar robusta habitatmönster för bättre prioritering av bevarandeinsatser.",
+    tags: ["R", "Species Distribution Modeling", "Remote Sensing", "Biodiversitet"],
+    repoUrl: "https://github.com/ulfboge/movement-ecology-sdm-madagascar",
     liveUrl: "",
     docsUrl: "",
+    imageUrl: "assets/screenshots/movement-ecology-screenshot.png",
     coordinates: [46.9, -19.5]
   },
   {
     id: "mgis-downloader",
     title: "MGIS-Downloader",
     type: "featured",
-    summary: "Webbapp för nedladdning och paketering av geodata från svenska datakällor via karta.",
-    tags: ["Node.js", "Leaflet", "STAC", "Geodataflöden"],
-    repoUrl: "",
+    summary: "Webbapp för nedladdning och paketering av geodata från svenska datakällor via karta. Flödet fokuserar på snabb åtkomst, tydligt urval och smidig export till vidare GIS-analys.",
+    tags: ["Node.js", "Web GIS", "Leaflet", "Datatillgång"],
+    repoUrl: "https://github.com/MundoGIS/MGIS-downloader",
     liveUrl: "",
     docsUrl: "",
+    imageUrl: "assets/screenshots/mgis-downloader-screenshot.png",
     coordinates: [16.2, 60.9]
   },
   {
     id: "maps-portfolio",
     title: "Maps Portfolio",
     type: "featured",
-    summary: "Samling av biodiversitetskartor i QGIS med både statiska kartblad och webbpublicering.",
+    summary: "Samling av biodiversitetskartor i QGIS med både statiska kartblad och webbpublicering. Fokus ligger på tydlig kartdesign, berättande visualisering och praktisk användning i kommunikation.",
     tags: ["QGIS", "Kartdesign", "Biodiversitet", "GitHub Pages"],
     repoUrl: "https://github.com/ulfboge/maps-portfolio",
     liveUrl: "",
     docsUrl: "",
+    imageUrl: "assets/screenshots/maps-portfolio.svg",
     coordinates: [39.8, -6.8]
   },
   {
     id: "halmstad-stadsnvi-project",
     title: "Halmstad StadsNVI (desktop)",
     type: "featured",
-    summary: "Praktiskt desktopprojekt för NVI med QGIS, kartproduktion och metodiskt QA/QC-upplägg.",
-    tags: ["NVI", "QGIS", "Desktop GIS", "Planeringsunderlag"],
-    repoUrl: "",
+    summary: "Praktiskt desktopprojekt för NVI med QGIS, kartproduktion och metodiskt QA/QC-upplägg. Levererar tydliga planeringsunderlag med spårbar metodik för kommunal tillämpning.",
+    tags: ["QGIS", "NVI", "Desktop GIS", "QA/QC"],
+    repoUrl: "https://github.com/ulfboge/halmstad-stadsnvi-project",
     liveUrl: "",
     docsUrl: "",
+    imageUrl: "assets/screenshots/halmstad-stadsnvi-project-screenshot.png",
     coordinates: [12.86, 56.67]
   },
   {
-    id: "enterprise-web-gis",
+    id: "enterprise",
     title: "Enterprise Web GIS Starter",
     type: "featured",
-    summary: "Prototyp för öppen web-GIS-plattform med PostGIS, pg_tileserv, STAC, FastAPI och MapLibre.",
-    tags: ["PostGIS", "FastAPI", "STAC", "MapLibre"],
-    repoUrl: "",
+    summary: "Prototyp för öppen web-GIS-plattform med PostGIS, pg_tileserv, STAC, FastAPI och MapLibre. Arkitekturen är modulär och utformad för att kunna skalas från demo till produktionsnära miljöer.",
+    tags: ["PostGIS", "FastAPI", "STAC", "Web GIS"],
+    repoUrl: "https://github.com/ulfboge/enterprise",
     liveUrl: "",
     docsUrl: "",
+    imageUrl: "assets/screenshots/enterprise-screenshot.png",
     coordinates: [15.0, 58.8]
   },
   {
-    id: "qgis-mcp",
+    id: "qgis_mcp",
     title: "QGIS MCP",
     type: "featured",
-    summary: "Integration mellan QGIS och MCP för promptstyrd lagerhantering, analys och PyQGIS-körning.",
+    summary: "Integration mellan QGIS och MCP för promptstyrd lagerhantering, analys och PyQGIS-körning. Projektet visar hur AI-assisterad GIS-automation kan standardiseras och återanvändas i praktiska arbetsflöden.",
     tags: ["QGIS", "MCP", "PyQGIS", "Automation"],
-    repoUrl: "",
+    repoUrl: "https://github.com/jjsantos01/qgis_mcp",
     liveUrl: "",
     docsUrl: "",
+    imageUrl: "assets/screenshots/qgis_mcp-screenshot.png",
     coordinates: null
   },
   {
-    id: "galago-audio-project",
+    id: "galago_audio_project",
     title: "Galago Acoustic Classifier",
     type: "featured",
-    summary: "CNN-baserad artklassificering av galago-läten med mel-spektrogram och osäkerhetshantering.",
-    tags: ["Python", "Deep Learning", "Akustik", "Biodiversitet"],
-    repoUrl: "",
+    summary: "CNN-baserad artklassificering av galago-läten med mel-spektrogram och osäkerhetshantering. Pipen stödjer reproducerbar träning, validering och tydlig jämförelse mellan modellversioner.",
+    tags: ["Python", "Deep Learning", "Bioakustik", "Biodiversitet"],
+    repoUrl: "https://github.com/ulfboge/galago_audio_project",
     liveUrl: "",
     docsUrl: "",
+    imageUrl: "assets/screenshots/galago_audio_project-screenshot.png",
     coordinates: null
   },
   {
@@ -181,7 +218,7 @@ const projects = [
     title: "Wildlands League Ecosystem",
     type: "lab",
     summary: "Projektstruktur för skogs- och ekosystemanalys med fokus på metodik och rapportproduktion.",
-    tags: ["Ecosystem Services", "Skogsanalys", "Rapportering"],
+    tags: ["Ekosystemtjänster", "Skogsanalys", "Rapportering"],
     repoUrl: "https://github.com/ulfboge/wildlands-league-ecosystem",
     liveUrl: "",
     docsUrl: "",
@@ -285,11 +322,7 @@ const state = {
 const groupOrder = ["featured", "lab", "fictional"];
 const dialog = document.getElementById("project-dialog");
 const dialogContent = document.getElementById("dialog-content");
-const unavailableRepoIds = new Set([
-  "galagos-db",
-  "morast-qgis",
-  "agb-comparison"
-]);
+const unavailableRepoIds = new Set([]);
 
 function getFilteredProjects() {
   const needle = state.search.trim().toLowerCase();
