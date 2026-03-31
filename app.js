@@ -63,6 +63,19 @@ const projects = [
     coordinates: [15.8, 61.4]
   },
   {
+    id: "skogsmonitor-py",
+    title: "Skogsmonitor-py (STAC & Python)",
+    type: "featured",
+    summary:
+      "Samma idé som skogsmonitor-demon men utan GEE: Fiby som fast AOI, två sommarfönster, Sentinel-2 L2A via STAC (Planetary Computer), NDVI och ΔNDVI, COG och OpenLayers-karta. Tre kommandon (download → compute_ndvi → export_cog); GitHub Actions bygger kartan till Pages.",
+    tags: ["Nisch B", "Python", "STAC", "Sentinel-2", "Skog", "OpenLayers", "Sverige"],
+    repoUrl: "https://github.com/ulfboge/skogsmonitor-py",
+    liveUrl: "https://ulfboge.github.io/skogsmonitor-py/",
+    docsUrl: "",
+    imageUrl: "",
+    coordinates: [17.07, 59.885]
+  },
+  {
     id: "soil-carbon-modeling",
     title: "Soil Carbon Modeling",
     type: "featured",
